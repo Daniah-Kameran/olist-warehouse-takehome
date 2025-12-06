@@ -15,7 +15,7 @@ It keeps:
 - **Historical correctness** using customer SCD “as-of” joins
 - **Lifecycle attributes** (first_order_date, new_customer_flag)
 
-:contentReference[oaicite:13]{index=13}
+
 
 ## Baseline sales view
 ```sql
@@ -112,3 +112,4 @@ LEFT JOIN workspace.default.dim_payment pay
   ON b.payment_sk = pay.payment_sk
 LEFT JOIN cust_first_order fco
   ON c.customer_unique_id = fco.customer_unique_id;
+
