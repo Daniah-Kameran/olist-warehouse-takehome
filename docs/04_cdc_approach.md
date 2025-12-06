@@ -65,4 +65,5 @@ This guarantees:
    - exactly one current row per customer
    - no duplicate fact grains
 
-:contentReference[oaicite:22]{index=22}
+
+
