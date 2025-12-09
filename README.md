@@ -1,4 +1,4 @@
-# Olist Data Warehouse Take-Home (Databricks + Star Schema)
+# Olist Data Warehouse Take-Home 
 
 ## Overview
 This repository contains a star-schema data warehouse built on the Olist dataset (2016–2018) using Databricks SQL.  
@@ -17,12 +17,12 @@ It includes raw table loading, dimension and fact creation, Slowly Changing Dime
 │   ├── scd_maintenance_examples.sql  
 │   └── denormalised_view_example.sql  
 ├── notebooks/  
-│   └── olist_takehome.ipynb (or .py)  
+│   └── olist_takehome.ipynb   
 └── diagrams/  
-    └── olist_star_schema.png (or pdf)
+    └── olist_star_schema.png 
 
 ## How to run (Databricks)
-1. Upload raw CSVs and create raw tables (see notebook Section 1).
+1. Upload raw CSVs and create raw tables.
 2. Run the notebook **top-to-bottom**. The pipeline is rerunnable:
    - **Type-1 dimensions** use `CREATE OR REPLACE TABLE AS SELECT` (overwrite).
    - **Fact** uses `TRUNCATE + INSERT INTO` to prevent duplicates.
@@ -32,7 +32,7 @@ It includes raw table loading, dimension and fact creation, Slowly Changing Dime
    - `vw_fulfillment_order_item`: optional fulfillment/operational insights.
 
 ## Notebook execution note (schema qualification)
-All SQL in the Databricks notebook assumes the working schema is `workspace.default`.  
+All SQL in the Databricks notebook assumes the working schema is **`workspace.default`**.  
 To make the notebook portable, table references are schema-qualified in the final version:
 
 ```sql
