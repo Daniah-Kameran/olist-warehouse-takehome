@@ -1,11 +1,7 @@
 
 
 
----
 
-## `docs/03_denormalised_layer.md`
-
-```md
 # 03 — Denormalised Reporting Layer
 
 ## Purpose
@@ -112,4 +108,5 @@ LEFT JOIN workspace.default.dim_payment pay
   ON b.payment_sk = pay.payment_sk
 LEFT JOIN cust_first_order fco
   ON c.customer_unique_id = fco.customer_unique_id;
+
 
