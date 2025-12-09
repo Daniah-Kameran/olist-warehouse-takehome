@@ -1,9 +1,5 @@
 
----
 
-## `docs/04_cdc_approach.md`
-
-```md
 # 04 — CDC (Change Data Capture) Approach
 
 ## Analyst scope vs engineering scope
@@ -12,7 +8,7 @@ As a data analyst, my role is to define:
 - **Which changes trigger SCD2 vs overwrite**
 - **How reporting must stay historically correct**
 
-The physical ingestion, streaming, and scheduling are **data engineering scope**. I outline the logic needed for business correctness below. :contentReference[oaicite:17]{index=17}
+The physical ingestion, streaming, and scheduling are **data engineering scope**. I outline the logic needed for business correctness below. :
 
 ## Event structure and ingestion
 Expected CDC event schema (JSON):
@@ -64,6 +60,7 @@ This guarantees:
 5. Data quality checks:
    - exactly one current row per customer
    - no duplicate fact grains
+
 
 
 
