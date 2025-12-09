@@ -49,7 +49,7 @@ All dimensions use surrogate keys (`*_sk`) and are joined from the fact through 
 - `seller_sk`
 - `geography_sk`
 - `date_sk`
-- `payment_sk`. :contentReference[oaicite:8]{index=8}
+- `payment_sk`. 
 
 Business/natural keys (e.g., `customer_id`, `product_id`) stay in dimensions for traceability.
 
@@ -64,7 +64,7 @@ Business/natural keys (e.g., `customer_id`, `product_id`) stay in dimensions for
 | `dim_seller` | seller master | `seller_sk`, `seller_id`, seller city/state |
 | `dim_geography` | ZIP prefix based geography | `geography_sk`, zip prefix, city/state, lat/lng |
 | `dim_date` | calendar roles for ordering & delivery analysis | `date_sk`, date, year, month, etc. |
-| `dim_payment` | payment type & installments | `payment_sk`, payment_type, payment_installments | :contentReference[oaicite:9]{index=9}:contentReference[oaicite:10]{index=10}
+| `dim_payment` | payment type & installments | `payment_sk`, payment_type, payment_installments | 
 
 ---
 
@@ -74,9 +74,7 @@ Because the fact is at order-item grain and dimensions are conformed:
 - **Revenue by segment:** group by product category, seller geography, customer geography.  
 - **Top product/segment combinations:** multi-dim groupings on the same fact.  
 - **New customers:** first purchase date derived from earliest fact row per customer.  
-- **Historical correctness:** join fact to SCD2 customer on effective/expiry windows. :contentReference[oaicite:11]{index=11}:contentReference[oaicite:12]{index=12}
-
----
+- **Historical correctness:** join fact to SCD2 customer on effective/expiry windows. 
 
 
-- Optional ML questions supported by adding derived feature views. :contentReference[oaicite:13]{index=13}
+
